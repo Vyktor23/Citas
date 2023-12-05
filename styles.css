@@ -1,0 +1,163 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #4CAF50;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center
+}
+
+header h1{
+    color: black;
+}
+
+
+.container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+}
+
+.cita{
+    height: 20px;
+}
+.tipocita {
+    width: 30%;
+    height: 40%;
+    text-align: center;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.tipocita select{
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    border-radius: 50px;
+}
+
+.card{
+    width: 20%;
+    background-color: antiquewhite;
+    border-radius: 8%;
+}
+.cita a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.apartdoCitas {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    align-items: center;
+    text-align: center;
+}
+
+.apartdoCitas .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: antiquewhite;
+}
+
+.formulario {
+    margin-top: 5%;
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input,
+select {
+    width: 60%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+.regresar {
+    margin-top: 10px;
+}
