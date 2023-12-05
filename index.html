@@ -1,13 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
   <script src="./main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <title>Clinica Veterinaria My Pets</title>
 </head>
+
 <body>
-  
+
+  <header>
+    <h1>Bienvenidos a Clinica Veterinaria My Pets</h1>
+    <img src="https://th.bing.com/th/id/OIP.lk9hwnsT2C9WbdnFQCadHAAAAA?rs=1&pid=ImgDetMain" alt="logo" class="logo">
+  </header>
+
+  <div class="container">
+    <div class="tipocita">
+      <form id="tiposdecitas">
+        <label for="tipocita">Tipos de Citas</label>
+        <div class="opciones">
+          <select name="tipo" id="tipo" required>
+            <option value="selecciona"></option>
+            <option value="Perro">Activas</option>
+            <option value="Gato">Finalizadas</option>
+            <option value="Pájaro">Canceladas</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <br>
+    <div class="cita">
+      <a href="./index2.html">Agendar Cita</a>
+    </div>
+    <br>
+  </div>
+
+
+
+  <div id="mostrarLasCitas" class="apartdoCitas">
+    <!-- Aquí es donde se mostrarán las citas -->
+  </div>
+
+  <div id="apartdoCitas">
+    <div id="citasContainer" class="apartdoCit"></div>
+    <div class="card">
+      <ul> Nombre:<span> Firulais</span></ul>
+      <img src="https://th.bing.com/th/id/R.c9c01b20d59b067d7aa5173165e398be?rik=UvJQOviuzYS9OQ&pid=ImgRaw&r=0" alt="img">
+      <ul>Propietario: <span>Victor Ramirez</span></ul>
+      <ul>Telefono: <span>3142557915</span></ul>
+      <ul>Tipo de Mascota: <span>Perro</span></ul>
+      <ul>Fecha de la cita: <span>13/12/2023</span></ul>
+      <ul>Hora de la cita: <span>10:30 am</span></ul>
+      <ul>Sintomas: <span>Fiebre.</span></ul>
+      <button type="button">Modificar</button>
+      <button type="button">Eliminar</button>
+      <button type="button">Finalizar</button>
+    </div>
+
+  </div>
+
+  <footer>
+  </footer>
 </body>
+
 </html>
