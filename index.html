@@ -12,59 +12,125 @@
 </head>
 
 <body>
+  <div id="primeraParte">
+    <header>
+      <h1>Bienvenidos a Clinica Veterinaria My Pets</h1>
+      <img src="https://th.bing.com/th/id/OIP.lk9hwnsT2C9WbdnFQCadHAAAAA?rs=1&pid=ImgDetMain" alt="logo" class="logo">
+    </header>
 
-  <header>
-    <h1>Bienvenidos a Clinica Veterinaria My Pets</h1>
-    <img src="https://th.bing.com/th/id/OIP.lk9hwnsT2C9WbdnFQCadHAAAAA?rs=1&pid=ImgDetMain" alt="logo" class="logo">
-  </header>
-
-  <div class="container">
-    <div class="tipocita">
-      <form id="tiposdecitas">
-        <label for="tipocita">Tipos de Citas</label>
-        <div class="opciones">
-          <select name="tipo" id="tipo" required>
-            <option value="selecciona"></option>
-            <option value="Perro">Activas</option>
-            <option value="Gato">Finalizadas</option>
-            <option value="Pájaro">Canceladas</option>
-          </select>
-        </div>
-      </form>
-    </div>
-    <br>
-    <div class="cita">
-      <a href="./index2.html">Agendar Cita</a>
-    </div>
-    <br>
-  </div>
-
-
-
-  <div id="mostrarLasCitas" class="apartdoCitas">
-    <!-- Aquí es donde se mostrarán las citas -->
-  </div>
-
-  <div id="apartdoCitas">
-    <div id="citasContainer" class="apartdoCit"></div>
-    <div class="card">
-      <ul> Nombre:<span> Firulais</span></ul>
-      <img src="https://th.bing.com/th/id/R.c9c01b20d59b067d7aa5173165e398be?rik=UvJQOviuzYS9OQ&pid=ImgRaw&r=0" alt="img">
-      <ul>Propietario: <span>Victor Ramirez</span></ul>
-      <ul>Telefono: <span>3142557915</span></ul>
-      <ul>Tipo de Mascota: <span>Perro</span></ul>
-      <ul>Fecha de la cita: <span>13/12/2023</span></ul>
-      <ul>Hora de la cita: <span>10:30 am</span></ul>
-      <ul>Sintomas: <span>Fiebre.</span></ul>
-      <button type="button">Modificar</button>
-      <button type="button">Eliminar</button>
-      <button type="button">Finalizar</button>
+    <div class="container">
+      <div class="tipocita">
+        <form id="tiposdecitas">
+          <label for="tipocita">Tipos de Citas</label>
+          <div class="opciones">
+            <select name="tipo" id="tipo" required>
+              <option value="selecciona">Selecciona</option>
+              <option value="Perro">Activas</option>
+              <option value="Gato">Finalizadas</option>
+              <option value="Pájaro">Canceladas</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <br>
+      <div class="cita">
+        <button onclick="cambiarPantalla()">Agendar Cita</button>
+      </div>
+      <br>
     </div>
 
-  </div>
 
-  <footer>
-  </footer>
+
+    <div id="mostrarLasCitas" class="apartdoCitas">
+    </div>
+
+    <div id="apartdoCitas">
+      <div id="citasContainer" class="apartdoCit"></div>
+      <div class="card">
+        <ul> Nombre:<span> Firulais</span></ul>
+        <img src="https://th.bing.com/th/id/R.c9c01b20d59b067d7aa5173165e398be?rik=UvJQOviuzYS9OQ&pid=ImgRaw&r=0"
+          alt="img">
+        <ul>Propietario: <span>Victor Ramirez</span></ul>
+        <ul>Telefono: <span>3142557915</span></ul>
+        <ul>Tipo de Mascota: <span>Perro</span></ul>
+        <ul>Fecha de la cita: <span>13/12/2023</span></ul>
+        <ul>Hora de la cita: <span>10:30 am</span></ul>
+        <ul>Sintomas: <span>Fiebre.</span></ul>
+        <button type="button">Modificar</button>
+        <button type="button">Eliminar</button>
+        <button type="button">Finalizar</button>
+      </div>
+
+    </div>
+
+    <div id="mostrarLasCitas" class="apartdoCitas">
+    </div>
+
+    <footer>
+    </footer>
+  </div>
+  <div id="segundaParte" style="display: none;">
+    <div class="contenedor">
+      <div class="formulario">
+        <h1>Agenda de Citas para Mascotas</h1>
+        <form id="citaFormulario">
+          <div class="info1">
+            <div class="nombremascota">
+              <label for="nombre">Nombre de la Mascota:</label>
+              <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <br>
+            <div class="propietario">
+              <label for="propietario">Nombre del Propietario:</label>
+              <input type="text" id="propietario" name="propietario" required>
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+            </div>
+            <br>
+          </div>
+          <div class="tipomascota">
+            <label for="mascota">Tipo de Mascota</label>
+            <br>
+            <select name="tipo" id="tipo" required>
+              <br>
+              <option value="selecciona">Selecciona</option>
+              <option value="Perro">Perro</option>
+              <option value="Gato">Gato</option>
+              <option value="Pájaro">Pájaro</option>
+              <option value="Hamster">Hamster</option>
+              <option value="Camaleón">Camaleón</option>
+              <option value="Lagarto">Lagarto</option>
+              <option value="Araña">Araña</option>
+              <option value="Conejo">Conejo</option>
+              <option value="Pez">Pez</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="info2">
+            <div class="fechayhora">
+              <label for="fecha">Fecha de la Cita:</label>
+              <input type="date" id="fecha" name="fecha" min="" required>
+              <label for="hora">Hora de la Cita:</label>
+              <input type="time" id="hora" name="hora" min="09:00" max="17:00" required>
+            </div>
+            <br>
+            <div class="sintomas">
+              <label for="Síntomas">Síntomas:</label>
+              <input type="text" name="Síntomas" id="Síntomas">
+            </div>
+          </div>
+          <div class="boton">
+            <button type="button" onclick="validarCita()">Agendar Cita</button>
+          </div>
+          <div class="regresar">
+            <button onclick="cambiarPantalla()">Regresar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    
+  </div>
 </body>
 
 </html>
