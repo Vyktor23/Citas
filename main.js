@@ -1,4 +1,16 @@
+let contPagina = 1;
 
+function cambiarPantalla() {
+  if (contPagina % 2 === 0) {
+    document.getElementById('primeraParte').style.display = 'block';
+    document.getElementById('segundaParte').style.display = 'none';
+    contPagina += 1;
+  } else {
+    document.getElementById('primeraParte').style.display = 'none';
+    document.getElementById('segundaParte').style.display = 'block';
+    contPagina += 1;
+  }
+}
 
 let citas = [];
 
@@ -18,23 +30,23 @@ function validarCita() {
   let horaMaxima = new Date('1970-01-01T17:00:00');
   let seleccionHora = new Date('1970-01-01T' + hora);
 
-  if ( nombreMascota ==='' || propietario === '' || telefono === '' || fecha === '' || hora === '') {
+  if (nombreMascota === '' || propietario === '' || telefono === '' || fecha === '' || hora === '') {
     swal('Advertencia', 'Por favor, complete todos los campos.', 'warning');
-      return;
+    return;
   } else if (telefono.length < 10) {
     swal('Advertencia', 'El campo teléfono debe contener al menos 10 números.', 'warning');
-      return;
+    return;
   } else if (seleccionFecha <= fechaActual) {
     swal('Advertencia', 'La fecha para la cita debe ser posterior a la fecha actual.', 'warning');
-      return;
+    return;
   } else if (seleccionHora < horaMinima || seleccionHora > horaMaxima) {
     swal('Advertencia', 'La hora para la cita debe ser entre las 08:00 am y las 17:00 pm.', 'warning');
-      return;
-  } else{
+    return;
+  } else {
     swal('¡Excelente!', 'Tu cita fue registrada correctamente.', 'success');
 
     const nuevaCita = {
-      nombre: nombreMascota,
+      nombreMascota,
       propietario,
       telefono,
       tipoMascota,
@@ -43,18 +55,22 @@ function validarCita() {
       sintomas
     };
     citas.push(nuevaCita);
+    document.getElementById('mostrarLasCitas').innerHTML="";
     mostrarCita();
   }
 
   // window.location.href = './index.html';
   document.getElementById('citaFormulario').reset();
   console.log(citas)
-
+  
 }
 
 
 
 function mostrarCita() {
+  let tipoMascota = document.getElementById('tipo').value;
+
+  let fragment = document.createDocumentFragment();
   citas.forEach((item, index) => {
     let dcard = document.createElement('div');
     let pnombre = document.createElement('p');
@@ -137,10 +153,12 @@ function mostrarCita() {
     dcard.appendChild(phora);
     dcard.appendChild(psintomas);
     dcard.appendChild(botones);
+    fragment.appendChild(dcard);
 
-    document.getElementById('mostrarLasCitas').appendChild(dcard);
+    document.getElementById('mostrarLasCitas').appendChild(fragment);
   });
 }
+
 
 
 
