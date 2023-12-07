@@ -23,8 +23,8 @@
         <form id="tiposdecitas">
           <label for="tipocita">Tipos de Citas</label>
           <div class="opciones">
-            <select name="tipo" id="tipo" required>
-              <option value="selecciona">Selecciona</option>
+            <select name="tipocita" id="tipocita" required>
+              <option value="selecciona" disabled selected>Selecciona...</option>
               <option value="Perro">Activas</option>
               <option value="Gato">Finalizadas</option>
               <option value="Pájaro">Canceladas</option>
@@ -42,6 +42,7 @@
 
 
     <div id="mostrarLasCitas" class="apartdoCitas">
+      <!-- Aquí es donde se mostrarán las citas -->
     </div>
 
     <div id="apartdoCitas">
@@ -64,6 +65,7 @@
     </div>
 
     <div id="mostrarLasCitas" class="apartdoCitas">
+      <!-- Aquí es donde se mostrarán las citas -->
     </div>
 
     <footer>
@@ -92,8 +94,7 @@
             <label for="mascota">Tipo de Mascota</label>
             <br>
             <select name="tipo" id="tipo" required>
-              <br>
-              <option value="selecciona">Selecciona</option>
+              <option disabled selected="">Selecciona</option>
               <option value="Perro">Perro</option>
               <option value="Gato">Gato</option>
               <option value="Pájaro">Pájaro</option>
@@ -128,8 +129,6 @@
         </form>
       </div>
     </div>
-  
-    
   </div>
 </body>
 
