@@ -64,13 +64,6 @@ img {
     border-radius: 8%;
 }
 
-.cita a {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border-radius: 5px;
-}
 
 .apartdoCitas {
     margin-top: 20px;
@@ -160,4 +153,28 @@ a {
 
 .regresar {
     margin-top: 10px;
+}
+
+.apartdoCitas div{
+    width: 20%;
+    background-color: antiquewhite;
+    border-radius: 8%;
+    text-align: center;
+    margin-top: 2%;
+    padding: 2%;
+}
+
+.apartdoCitas a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.imagen2{
+    /* border: 2px solid black; */
+    width: 200px;
+    height: 200px;
 }
